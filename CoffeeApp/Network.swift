@@ -3,7 +3,7 @@ import Foundation
 class CoffeeAPIClient {
     private let baseURL = "https://api.sampleapis.com"
 
-    func fetchHotCoffee(completion: @escaping (Result<[Coffee], Error>) -> Void) {
+    func fetchCoffee(completion: @escaping (Result<[Coffee], Error>) -> Void) {
         let endpoint = "/coffee/hot"
         guard let url = URL(string: baseURL + endpoint) else {
             return completion(.failure(NSError(domain: "Invalid URL", code: 1, userInfo: nil)))

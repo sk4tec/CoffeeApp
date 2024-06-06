@@ -1,18 +1,24 @@
 import Foundation
 
 class CoffeeViewModel: ObservableObject {
-    @Published var coffeeList: [Coffee] = []
+    @Published var state: UIState = .loading
     
-    func fetchHotCoffee() {
+    enum UIState {
+        case loading
+        case success([Coffee])
+        case error(String)
+    }
+    
+    func fetchCoffee() {
         let network = CoffeeAPIClient()
         
-        network.fetchHotCoffee { result in
+        network.fetchCoffee { result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let coffeeList):
-                    self.coffeeList = coffeeList
+                    self.state = .success(coffeeList)
                 case .failure(let error):
-                    print("Error fetching coffee data: \(error)")
+                    self.state = .error(error.localizedDescription)
                 }
             }
         }

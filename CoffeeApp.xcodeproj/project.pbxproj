@@ -16,6 +16,8 @@
 		FB53DCCC2C1259AC007A512C /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53DCCB2C1259AC007A512C /* Network.swift */; };
 		FB53DCCE2C126287007A512C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53DCCD2C126287007A512C /* DetailView.swift */; };
 		FB53DD0F2C1265B4007A512C /* CoffeeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53DD0E2C1265B4007A512C /* CoffeeAppTests.swift */; };
+		FB53DD172C126ADC007A512C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53DD162C126ADC007A512C /* LoadingView.swift */; };
+		FB53DD192C126B03007A512C /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53DD182C126B03007A512C /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,8 @@
 		FB53DCCD2C126287007A512C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		FB53DD0C2C1265B4007A512C /* CoffeeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB53DD0E2C1265B4007A512C /* CoffeeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeAppTests.swift; sourceTree = "<group>"; };
+		FB53DD162C126ADC007A512C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		FB53DD182C126B03007A512C /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,15 +86,16 @@
 		FB53DCB52C125673007A512C /* CoffeeApp */ = {
 			isa = PBXGroup;
 			children = (
+				FB53DD152C126AAC007A512C /* UI */,
 				FB53DCB62C125673007A512C /* CoffeeApp.swift */,
 				FB53DCCB2C1259AC007A512C /* Network.swift */,
 				FB53DCC72C12593A007A512C /* Coffee.swift */,
 				FB53DCB82C125673007A512C /* ContentView.swift */,
 				FB53DCC52C1258F5007A512C /* CoffeeViewModel.swift */,
+				FB53DCCD2C126287007A512C /* DetailView.swift */,
 				FB53DCBA2C125674007A512C /* Assets.xcassets */,
 				FB53DCBC2C125674007A512C /* CoffeeApp.entitlements */,
 				FB53DCBD2C125674007A512C /* Preview Content */,
-				FB53DCCD2C126287007A512C /* DetailView.swift */,
 			);
 			path = CoffeeApp;
 			sourceTree = "<group>";
@@ -109,6 +114,15 @@
 				FB53DD0E2C1265B4007A512C /* CoffeeAppTests.swift */,
 			);
 			path = CoffeeAppTests;
+			sourceTree = "<group>";
+		};
+		FB53DD152C126AAC007A512C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FB53DD162C126ADC007A512C /* LoadingView.swift */,
+				FB53DD182C126B03007A512C /* ErrorView.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,7 +230,9 @@
 				FB53DCB92C125673007A512C /* ContentView.swift in Sources */,
 				FB53DCC62C1258F5007A512C /* CoffeeViewModel.swift in Sources */,
 				FB53DCB72C125673007A512C /* CoffeeApp.swift in Sources */,
+				FB53DD172C126ADC007A512C /* LoadingView.swift in Sources */,
 				FB53DCC82C12593A007A512C /* Coffee.swift in Sources */,
+				FB53DD192C126B03007A512C /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

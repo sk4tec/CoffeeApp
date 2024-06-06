@@ -16,7 +16,7 @@ class CoffeeAPITests: XCTestCase {
         
         // Call the function
         let coffee = CoffeeAPIClient()
-        coffee.fetchHotCoffee { coffeeList in
+        coffee.fetchCoffee { coffeeList in
             // Test if coffeeList is not nil
             XCTAssertNotNil(coffeeList, "The coffeeList should not be nil")
             

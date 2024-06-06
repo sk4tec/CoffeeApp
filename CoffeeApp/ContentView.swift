@@ -5,12 +5,19 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            List(viewModel.coffeeList) { coffee in
-                NavigationLink(coffee.title, destination: DetailView(text: coffee.title, title: coffee.description, image: coffee.image))
+            switch viewModel.state {
+            case .loading:
+                LoadingView()
+            case .success(let coffeeList):
+                List(coffeeList) { coffee in
+                    NavigationLink(coffee.title, destination: DetailView(text: coffee.title, title: coffee.description, image: coffee.image))
+                }
+            case .error(let error):
+                ErrorView(errorMessage: error)
             }
         }
         .onAppear {
-            viewModel.fetchHotCoffee()
+            viewModel.fetchCoffee()
         }
     }
 }
