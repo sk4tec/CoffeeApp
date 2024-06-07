@@ -12,7 +12,7 @@ struct ErrorView: View {
     
     var body: some View {
         VStack {
-            Text("Error")
+            Text("Error 🥺")
                 .font(.headline)
             Text(errorMessage)
                 .font(.subheadline)

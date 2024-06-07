@@ -1,7 +1,7 @@
 import SwiftUI
 
-struct ContentView: View {
-    @StateObject private var viewModel = CoffeeViewModel()
+struct HomeView: View {
+    @StateObject private var viewModel = HomeViewModel()
 
     var body: some View {
         NavigationView {
@@ -10,8 +10,14 @@ struct ContentView: View {
                 LoadingView()
             case .success(let coffeeList):
                 List(coffeeList) { coffee in
-                    NavigationLink(coffee.title, destination: DetailView(text: coffee.title, title: coffee.description, image: coffee.image))
+                    NavigationLink {
+                        DetailView(description: coffee.title, title: coffee.description, image: coffee.image, ingredients: coffee.ingredients)
+                    } label: {
+                        Text("\(coffee.title)")
+                    }
+
                 }
+                .navigationTitle("Coffee for Coders")
             case .error(let error):
                 ErrorView(errorMessage: error)
             }
@@ -23,5 +29,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    HomeView()
 }

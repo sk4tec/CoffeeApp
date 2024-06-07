@@ -1,6 +1,6 @@
 import Foundation
 
-class CoffeeViewModel: ObservableObject {
+class HomeViewModel: ObservableObject {
     @Published var state: UIState = .loading
     
     enum UIState {

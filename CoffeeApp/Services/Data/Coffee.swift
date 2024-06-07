@@ -1,6 +1,6 @@
 import Foundation
 
-struct Coffee: Codable, Identifiable {
+struct CoffeeModel: Codable, Identifiable {
     let id = UUID()
     let title: String
     let description: String
@@ -13,4 +13,13 @@ struct Coffee: Codable, Identifiable {
         case ingredients
         case image
     }
+}
+
+struct Coffee: Identifiable {
+    var id =  UUID()
+    let title: String
+    let description: String
+    let ingredients: [String]
+    let image: String
+    var like = false    
 }

@@ -20,8 +20,12 @@ class CoffeeAPIClient {
 
             do {
                 let decoder = JSONDecoder()
-                let coffeeList = try decoder.decode([Coffee].self, from: data)
-                completion(.success(coffeeList))
+                let coffeeList = try decoder.decode([CoffeeModel].self, from: data)
+                
+                let coffeeRet = coffeeList.map { Coffee(title: $0.title, description: $0.description, ingredients: $0.ingredients, image: $0.image)
+                }
+                
+                completion(.success(coffeeRet))
             } catch {
                 completion(.failure(error))
             }
