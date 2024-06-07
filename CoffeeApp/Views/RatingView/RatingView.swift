@@ -11,7 +11,15 @@ struct RatingView: View {
     @StateObject var viewModel = RatingViewModel()
 
     var body: some View {
-        VStackLayout(alignment: .leading, spacing: 12.0) {
+        switch viewModel.state {
+        case .error: ErrorView(errorMessage: "Oh no!")
+        case .loading: LoadingView()
+        case .success: content
+        }
+    }
+
+    var content: some View {
+        VStack(spacing: 12) {
             HStack {
                 Text("Name")
                 TextField("Enter Name", text: $viewModel.name)
@@ -22,9 +30,10 @@ struct RatingView: View {
             Slider(value: $viewModel.sliderValue, in: 0...4, step: 1)
 
             Button("Submit your review") {
-                
+                viewModel.send(input: .submit)
             }
         }
+        .padding(.horizontal, 12.0)
         .padding()
     }
 }

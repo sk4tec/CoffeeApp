@@ -21,7 +21,6 @@ class CoffeeAPITests: XCTestCase {
             XCTAssertNotNil(coffeeList, "The coffeeList should not be nil")
             
             // Test if coffeeList has elements
-//            XCTAssertGreaterThan(coffeeList.count ?? 0, 0, "The coffeeList should contain at least one item")
             
             // Test if the first item contains the expected properties
 //            if let coffee = coffeeList.first {

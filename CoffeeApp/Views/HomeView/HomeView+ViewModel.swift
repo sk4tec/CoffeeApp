@@ -5,7 +5,7 @@ class HomeViewModel: ObservableObject {
     
     enum UIState {
         case loading
-        case success([Coffee])
+        case success([CoffeeModel])
         case error(String)
     }
     

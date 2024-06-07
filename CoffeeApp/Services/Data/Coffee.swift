@@ -1,6 +1,6 @@
 import Foundation
 
-struct CoffeeModel: Codable, Identifiable {
+struct CoffeeData: Codable, Identifiable {
     let id = UUID()
     let title: String
     let description: String
@@ -15,11 +15,16 @@ struct CoffeeModel: Codable, Identifiable {
     }
 }
 
-struct Coffee: Identifiable {
+struct CoffeeModel: Identifiable {
     var id =  UUID()
     let title: String
     let description: String
     let ingredients: [String]
     let image: String
     var like = false    
+}
+
+enum Error: Swift.Error {
+    case unknown
+    case networkError
 }
