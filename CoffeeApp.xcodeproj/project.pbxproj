@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB45FC692C13285900A164E0 /* RatingView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB45FC682C13285900A164E0 /* RatingView+ViewModel.swift */; };
 		FB53DCB72C125673007A512C /* CoffeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53DCB62C125673007A512C /* CoffeeApp.swift */; };
 		FB53DCB92C125673007A512C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53DCB82C125673007A512C /* HomeView.swift */; };
 		FB53DCBB2C125674007A512C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB53DCBA2C125674007A512C /* Assets.xcassets */; };
 		FB53DCBF2C125674007A512C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB53DCBE2C125674007A512C /* Preview Assets.xcassets */; };
-		FB53DCC62C1258F5007A512C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53DCC52C1258F5007A512C /* HomeViewModel.swift */; };
+		FB53DCC62C1258F5007A512C /* HomeView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53DCC52C1258F5007A512C /* HomeView+ViewModel.swift */; };
 		FB53DCC82C12593A007A512C /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53DCC72C12593A007A512C /* Coffee.swift */; };
 		FB53DCCC2C1259AC007A512C /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53DCCB2C1259AC007A512C /* Network.swift */; };
 		FB53DCCE2C126287007A512C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53DCCD2C126287007A512C /* DetailView.swift */; };
@@ -32,13 +33,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB45FC682C13285900A164E0 /* RatingView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RatingView+ViewModel.swift"; sourceTree = "<group>"; };
 		FB53DCB32C125673007A512C /* CoffeeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB53DCB62C125673007A512C /* CoffeeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeApp.swift; sourceTree = "<group>"; };
 		FB53DCB82C125673007A512C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FB53DCBA2C125674007A512C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB53DCBC2C125674007A512C /* CoffeeApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoffeeApp.entitlements; sourceTree = "<group>"; };
 		FB53DCBE2C125674007A512C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FB53DCC52C1258F5007A512C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		FB53DCC52C1258F5007A512C /* HomeView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+ViewModel.swift"; sourceTree = "<group>"; };
 		FB53DCC72C12593A007A512C /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
 		FB53DCCB2C1259AC007A512C /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		FB53DCCD2C126287007A512C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
@@ -67,6 +69,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB45FC662C13281F00A164E0 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				FB53DCB82C125673007A512C /* HomeView.swift */,
+				FB53DCC52C1258F5007A512C /* HomeView+ViewModel.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		FB45FC672C13282C00A164E0 /* RatingView */ = {
+			isa = PBXGroup;
+			children = (
+				FB732A632C12797800A693B7 /* RatingView.swift */,
+				FB45FC682C13285900A164E0 /* RatingView+ViewModel.swift */,
+			);
+			path = RatingView;
+			sourceTree = "<group>";
+		};
 		FB53DCAA2C125673007A512C = {
 			isa = PBXGroup;
 			children = (
@@ -127,10 +147,9 @@
 		FB732A602C1275B800A693B7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FB53DCB82C125673007A512C /* HomeView.swift */,
-				FB53DCC52C1258F5007A512C /* HomeViewModel.swift */,
+				FB45FC662C13281F00A164E0 /* HomeView */,
 				FB53DCCD2C126287007A512C /* DetailView.swift */,
-				FB732A632C12797800A693B7 /* RatingView.swift */,
+				FB45FC672C13282C00A164E0 /* RatingView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -256,7 +275,8 @@
 				FB53DCCE2C126287007A512C /* DetailView.swift in Sources */,
 				FB53DCB92C125673007A512C /* HomeView.swift in Sources */,
 				FB732A642C12797800A693B7 /* RatingView.swift in Sources */,
-				FB53DCC62C1258F5007A512C /* HomeViewModel.swift in Sources */,
+				FB45FC692C13285900A164E0 /* RatingView+ViewModel.swift in Sources */,
+				FB53DCC62C1258F5007A512C /* HomeView+ViewModel.swift in Sources */,
 				FB53DCB72C125673007A512C /* CoffeeApp.swift in Sources */,
 				FB53DD172C126ADC007A512C /* LoadingView.swift in Sources */,
 				FB53DCC82C12593A007A512C /* Coffee.swift in Sources */,

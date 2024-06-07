@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject private var viewModel = HomeViewModel()
+    @StateObject var viewModel = HomeViewModel()
 
     var body: some View {
         NavigationView {
@@ -11,9 +11,9 @@ struct HomeView: View {
             case .success(let coffeeList):
                 List(coffeeList) { coffee in
                     NavigationLink {
-                        DetailView(description: coffee.title, title: coffee.description, image: coffee.image, ingredients: coffee.ingredients)
+                        DetailView(id: coffee.id, description: coffee.title, title: coffee.description, image: coffee.image, ingredients: coffee.ingredients)
                     } label: {
-                        Text("\(coffee.title)")
+                        Text("\(coffee.title) \(coffee.like ? "👍🏽" : "")")
                     }
 
                 }
