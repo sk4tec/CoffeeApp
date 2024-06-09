@@ -7,14 +7,16 @@ protocol CoffeeAPIClientProtocol {
 
 class CoffeeAPIClient: CoffeeAPIClientProtocol {
     func submitReview() throws {
-        throw Error.unknown
+        throw Error.networkError
     }
 
-    private let baseURL = "https://api.sampleapis.com"
+    enum Constants{
+        static let baseURL = "https://api.sampleapis.com"
+    }
 
     func fetchCoffee(completion: @escaping (Result<[CoffeeModel], Error>) -> Void) {
         let endpoint = "/coffee/hot"
-        guard let url = URL(string: baseURL + endpoint) else {
+        guard let url = URL(string: Constants.baseURL + endpoint) else {
             return completion(.failure(Error.networkError))
         }
 

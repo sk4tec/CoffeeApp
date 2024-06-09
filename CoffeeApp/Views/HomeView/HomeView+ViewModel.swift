@@ -3,7 +3,7 @@ import Foundation
 class HomeViewModel: ObservableObject {
     @Published var state: UIState = .loading
     
-    enum UIState {
+    public enum UIState {
         case loading
         case success([CoffeeModel])
         case error(String)
