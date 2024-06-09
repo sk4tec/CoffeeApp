@@ -6,6 +6,7 @@ import SwiftUI
 //     But, this didn't work and crashed - I commented it out and moved on.
 // 3 - I didn't include any Combine because there really wasn't a need to overcomplicate the code. But send(input: Input) funcs could send to PassThroughSubjects.
 // 4 - Strings should be localised
+// 5 I wrote some tests, I ran out of time to get them all working
 
 struct HomeView: View {
     @StateObject var viewModel = HomeViewModel()
